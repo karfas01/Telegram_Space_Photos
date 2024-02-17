@@ -7,7 +7,7 @@ from download_images import download_photo
 
 def get_epic_images(nasa_key):
 
-    number_of_repetitions = 5
+    number_of_repetitions = 4
 
     payload = {"api_key": nasa_key}
     epic_url = "https://api.nasa.gov/EPIC/api/natural/images"

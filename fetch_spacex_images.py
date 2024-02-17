@@ -4,8 +4,8 @@ import argparse
 from download_images import download_photo
 
 
-def fetch_spacex_last_launch(img_id):
-    spacex_url = f'https://api.spacexdata.com/v5/launches/{img_id}'
+def fetch_spacex_last_launch(launch_id):
+    spacex_url = f'https://api.spacexdata.com/v5/launches/{launch_id}'
     response_spacex = requests.get(spacex_url)
     response_spacex.raise_for_status()
     spacex_links = response_spacex.json()["links"]
@@ -13,7 +13,6 @@ def fetch_spacex_last_launch(img_id):
     for image_number, spacex_photo_url in enumerate(spacex_photos):
         filename = f'SpaceX_photo_{image_number}.jpeg'
         download_photo(filename, spacex_photo_url)
-
 
 def main():
 
