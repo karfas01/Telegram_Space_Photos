@@ -14,9 +14,9 @@ pip install -r requirements.txt
 
 - Для работы программы в дерриктории программы должен быть создан файл `.env`, с следующем содержимым:
 ```
-KEY_NASA="token_NASA_APIs"
-KEY_BOT="token_telegram_bot"
-CHANNEL_NAME="@Telegram_Channel_Name"
+NASA_KEY="token_NASA_APIs"
+TG_BOT_KEY="token_telegram_bot"
+TG_CHANNEL_NAME="@Telegram_Channel_Name"
 ```
 Чтобы получить token от: [NASA APIs](https://api.nasa.gov/).
 
