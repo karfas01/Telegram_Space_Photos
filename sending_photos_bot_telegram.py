@@ -24,19 +24,16 @@ def main():
     bot.send_message(text='Hi John!', chat_id=tg_chanal_name)
 
     while True:
-        folder = os.walk('images')
-        for files in folder:
-            files = files[2]
-            all_files = os.walk("images")
+        all_files = os.walk("images")
 
-            for array_of_files in all_files:
-                folder, nested_folder, files = array_of_files
-                random.shuffle(files)
+        for array_of_files in all_files:
+            folder, nested_folder, files = array_of_files
+            random.shuffle(files)
 
-                for tg_file_image in files:
-                    with open(f"images/{tg_file_image}", "rb") as file:
-                        bot.send_document(chat_id=tg_chanal_name, document=file)
-                    sleep(time_delay)
+            for tg_file_image in files:
+                with open(f"images/{tg_file_image}", "rb") as file:
+                    bot.send_document(chat_id=tg_chanal_name, document=file)
+                sleep(time_delay)
         sleep(args.periodicity_time)
 
 
